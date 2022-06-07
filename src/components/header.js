@@ -6,9 +6,11 @@ import {
     Link,
 
 } from 'react-router-dom'
+import HowMuch from "./howMuch";
 
 function Header() {
     return (
+        <>
             <header className="header_layout clearfix">
                 <section className="img_header"/>
                 <section className="main_section clearfix">
@@ -30,13 +32,25 @@ function Header() {
                     </ul>
                     <section className="start_helping">
                         <div className="text_helping">
-                        <p>Zacznij pomagać!</p>
-                        <p>Oddaj niechciane rzeczy w zaufane ręce</p>
+                            <p>Zacznij pomagać!</p>
+                            <p>Oddaj niechciane rzeczy w zaufane ręce</p>
+                            <div className="decoration"/>
+                            <div className="collection">
+                                <ul className="collection_ul">
+                                    <li>
+                                        <Link className="link_collection" to="/login">oddaj rzeczy</Link>
+                                    </li>
+                                    <li>
+                                        zorganizuj zbiórke
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </section>
                 </section>
-
             </header>
+            <HowMuch/>
+        </>
     );
 }
 

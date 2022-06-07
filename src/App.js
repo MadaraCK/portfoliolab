@@ -2,16 +2,17 @@ import React from 'react';
 import './scss/main.scss'
 import Login from "./components/login";
 import NewAccount from "./components/newAccount";
+import Header from "./components/header";
 import {
     BrowserRouter,
     Route,
     Routes,
 } from 'react-router-dom';
-import Header from "./components/header";
 
 
 function App(props) {
     return (
+
         <BrowserRouter>
             <Routes>
                 <Route element={<Header/>} path="/"/>
@@ -19,6 +20,7 @@ function App(props) {
                 <Route element={<NewAccount/>} path="/newAccount"/>
             </Routes>
         </BrowserRouter>
+
     );
 }
 

@@ -4,17 +4,17 @@
 
 body {
   font-family: $font-base;
-
+  height: 300vh;
+  overflow-x: hidden;
 
   .header_layout {
 
 
     .img_header {
-      position: absolute;
       background-image: url("../assets/Home-Hero-Image.jpg");
       width: 1368px;
       height: 963px;
-      left: -460px;
+      margin-left: -460px;
     }
 
     .main_section {
@@ -24,10 +24,11 @@ body {
       .ul_main_login {
         position: absolute;
         display: flex;
+        top: 10px;
         gap: 30px;
-        margin: 68px 120px;
+        margin: 68px 34px;
         @media screen and (min-width: 2400px) {
-          margin: 110px 166px;
+          margin: 80px 100px;
 
         }
 
@@ -49,7 +50,8 @@ body {
 
       .ul_main_nav {
         position: absolute;
-        margin: 155px 150px;
+        top: 0;
+        margin: 155px 70px;
         display: flex;
         justify-content: center;
         gap: 55px;
@@ -57,31 +59,193 @@ body {
         color: $charcoal;
         @media screen and (min-width: 2400px) {
           font-size: 24px;
-          margin: 200px;
+          margin: 160px 140px;
         }
-        .start{
+
+        .start {
           margin-top: -11px;
           box-sizing: border-box;
           padding: 10px 20px;
           border: 1px solid $olive_green;
         }
       }
-      .start_helping{
+
+      .start_helping {
         position: absolute;
-        top: 350px;
+        top: 410px;
         left: 950px;
         @media screen and (min-width: 2400px) {
           left: 1200px;
         }
-        .text_helping{
+
+        .text_helping {
           text-align: center;
           font-size: 38px;
           color: $charcoal;
+          letter-spacing: -0.76px;
+
+
+          .decoration {
+            background-image: url("../assets/Decoration.svg");
+            width: 250px;
+            height: 30px;
+            margin: 25px auto;
+          }
+
+          .collection {
+            margin-top: 65px;
+
+            .collection_ul {
+              display: flex;
+              justify-content: center;
+              gap: 44px;
+
+              li {
+                text-transform: uppercase;
+                font-size: 36px;
+                border: 1px solid;
+                max-width: 200px;
+                padding: 13px 60px;
+                color: $charcoal;
+              }
+
+              .link_collection {
+                text-decoration: none;
+                color: $charcoal;
+              }
+            }
+          }
         }
       }
 
     }
   }
 
+  .how_much {
+    position: relative;
+    background-image: url("../assets/3 Columns Background.png");
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .statistics {
+      text-align: center;
+      max-width: 340px;
+
+      h2 {
+        font-size: 90px;
+        color: $olive_green;
+
+      }
+
+      .space_stat {
+        margin: 30px 40px;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: $charcoal;
+
+      }
+
+      .lorem_stat {
+        color: $charcoal;
+        max-width: 320px;
+      }
+    }
+  }
+
+  .four_steps {
+
+    font-size: 38px;
+    color: $charcoal;
+    margin: 55px 0 95px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 60px;
+      content: url("../assets/Decoration.svg");
+      width: 250px;
+      height: 30px;
+    }
+
+  }
+
+  .steps {
+    background: $silver;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+
+    .instruction {
+      align-self: center;
+      text-align: center;
+      max-width: 160px;
+      position: relative;
+      .inst_text1:before{
+        bottom: 80px;
+        left: 40px;
+        position: absolute;
+        content: url("../assets/Icon-1.svg");
+        width: 80px;
+        height: 80px;
+      }
+      .inst_text2:before{
+        bottom: 90px;
+        left: 40px;
+        position: absolute;
+        content: url("../assets/Icon-2.svg");
+        width: 80px;
+        height: 80px;
+      }
+      .inst_text3:before{
+        bottom: 90px;
+        left: 40px;
+        position: absolute;
+        content: url("../assets/Icon-3.svg");
+        width: 80px;
+        height: 80px;
+      }
+      .inst_text4:before{
+        bottom: 90px;
+        left: 40px;
+        position: absolute;
+        content: url("../assets/Icon-4.svg");
+        width: 80px;
+        height: 80px;
+      }
+      .inst_text{
+        margin-bottom: 20px;
+        font-size: 18px;
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 28px;
+          left: 40px;
+          width: 80px;
+          height: 1px;
+          background: black;
+        }
+      }
+      .inst_text3{
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 45px;
+          left: 40px;
+          width: 80px;
+          height: 1px;
+          background: black;
+        }
+      }
+    }
+  }
 
 }
