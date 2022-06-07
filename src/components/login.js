@@ -1,8 +1,9 @@
 import React from 'react';
+import '../scss/main.scss'
 
 function Login(props) {
     return (
-        <div></div>
+        <div>zaloguj</div>
     );
 }
 
