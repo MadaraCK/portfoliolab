@@ -1,0 +1,28 @@
+@import "settings/reset";
+@import "settings/fonts";
+@import "settings/colors";
+
+body {
+  font-family: $font-base;
+
+
+    .header_layout {
+      display: flex;
+      justify-content: center;
+
+      .img_header {
+        position: absolute;
+        background-image: url("../assets/Home-Hero-Image.jpg");
+        width: 1368px;
+        height: 963px;
+        left: -460px;
+      }
+
+      .main_section {
+        margin: 105px 142px 219px 190px;
+      }
+    }
+
+
+
+}
