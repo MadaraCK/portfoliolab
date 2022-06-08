@@ -4,7 +4,6 @@
 
 body {
   font-family: $font-base;
-  height: 300vh;
   overflow-x: hidden;
 
   .header_layout {
@@ -247,5 +246,26 @@ body {
       }
     }
   }
+.button_inst{
 
+  display: flex;
+  justify-content: center;
+  .link_give{
+
+    text-decoration: none;
+    text-align: center;
+    max-width: 200px;
+    font-size: 36px;
+    color: $charcoal;
+    text-transform: uppercase;
+    border: 1px solid $olive_green;
+    padding: 25px 80px;
+    margin: 40px 0 80px 0;
+  }
+}
+  .about_us{
+    background: $silver;
+    width: 100vw;
+    height: 950px;
+  }
 }

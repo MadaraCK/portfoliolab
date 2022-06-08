@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 function HowMuch() {
     return (
@@ -54,6 +55,9 @@ function HowMuch() {
                     <p className="inst_text4 inst_text">Zamów kuriera</p>
                     <p className="instruction_text">kurier przyjedzie w dogodnym terminie</p>
                 </div>
+            </section>
+            <section className="button_inst">
+                <Link className="link_give" to="/login">oddaj rzeczy</Link>
             </section>
         </>
     );

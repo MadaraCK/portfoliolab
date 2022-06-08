@@ -6,7 +6,6 @@ import {
     Link,
 
 } from 'react-router-dom'
-import HowMuch from "./howMuch";
 
 function Header() {
     return (
@@ -49,7 +48,7 @@ function Header() {
                     </section>
                 </section>
             </header>
-            <HowMuch/>
+
         </>
     );
 }
