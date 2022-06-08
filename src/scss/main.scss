@@ -26,6 +26,7 @@ body {
         top: 10px;
         gap: 30px;
         margin: 68px 34px;
+
         @media screen and (min-width: 2400px) {
           margin: 80px 100px;
 
@@ -37,12 +38,14 @@ body {
           font-size: 14px;
           @media screen and (min-width: 2400px) {
             font-size: 20px;
+
           }
         }
 
         .link_account {
           border: 1px solid $canary_yellow;
           padding: 9px;
+
         }
 
       }
@@ -59,6 +62,10 @@ body {
         @media screen and (min-width: 2400px) {
           font-size: 24px;
           margin: 160px 140px;
+        }
+
+        .li_main_nav {
+          cursor: pointer;
         }
 
         .start {
@@ -186,7 +193,8 @@ body {
       text-align: center;
       max-width: 160px;
       position: relative;
-      .inst_text1:before{
+
+      .inst_text1:before {
         bottom: 80px;
         left: 40px;
         position: absolute;
@@ -194,7 +202,8 @@ body {
         width: 80px;
         height: 80px;
       }
-      .inst_text2:before{
+
+      .inst_text2:before {
         bottom: 90px;
         left: 40px;
         position: absolute;
@@ -202,7 +211,8 @@ body {
         width: 80px;
         height: 80px;
       }
-      .inst_text3:before{
+
+      .inst_text3:before {
         bottom: 90px;
         left: 40px;
         position: absolute;
@@ -210,7 +220,8 @@ body {
         width: 80px;
         height: 80px;
       }
-      .inst_text4:before{
+
+      .inst_text4:before {
         bottom: 90px;
         left: 40px;
         position: absolute;
@@ -218,10 +229,12 @@ body {
         width: 80px;
         height: 80px;
       }
-      .inst_text{
+
+      .inst_text {
         margin-bottom: 20px;
         font-size: 18px;
-        &:after{
+
+        &:after {
           content: "";
           display: block;
           position: absolute;
@@ -232,8 +245,9 @@ body {
           background: black;
         }
       }
-      .inst_text3{
-        &:after{
+
+      .inst_text3 {
+        &:after {
           content: "";
           display: block;
           position: absolute;
@@ -246,26 +260,79 @@ body {
       }
     }
   }
-.button_inst{
 
-  display: flex;
-  justify-content: center;
-  .link_give{
+  .button_inst {
 
-    text-decoration: none;
-    text-align: center;
-    max-width: 200px;
-    font-size: 36px;
-    color: $charcoal;
-    text-transform: uppercase;
-    border: 1px solid $olive_green;
-    padding: 25px 80px;
-    margin: 40px 0 80px 0;
+    display: flex;
+    justify-content: center;
+
+    .link_give {
+
+      text-decoration: none;
+      text-align: center;
+      max-width: 200px;
+      font-size: 36px;
+      color: $charcoal;
+      text-transform: uppercase;
+      border: 1px solid $olive_green;
+      padding: 25px 80px;
+      margin: 40px 0 80px 0;
+    }
   }
-}
-  .about_us{
+
+  .about_us {
+    display: flex;
+    justify-content: space-around;
     background: $silver;
     width: 100vw;
-    height: 950px;
+    height: 935px;
+
+    .about_us_text {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      color: $charcoal;
+
+      .text_pe {
+        text-align: center;
+        max-width: 660px;
+        margin-bottom: 230px;
+
+        .about {
+          font-size: 38px;
+          margin-bottom: 100px;
+          position: relative;
+
+          &:after {
+            position: absolute;
+            top: 70px;
+            left: 205px;
+            content: url("../assets/Decoration.svg");
+            width: 150px;
+            height: 30px;
+          }
+        }
+
+        .about_text {
+          font-size: 30px;
+          line-height: 56px;
+
+          &:after {
+            content: url("../assets/Signature.svg");
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            margin-top: 100px;
+          }
+        }
+      }
+    }
+
+    .about_img {
+      background-image: url("../assets/People.jpg");
+      width: 1308px;
+      height: 935px;
+    }
   }
 }

@@ -2,10 +2,9 @@ import React from 'react';
 import '../scss/main.scss'
 
 import {
-
     Link,
-
 } from 'react-router-dom'
+import { Link as LinkRoll, } from 'react-scroll'
 
 function Header() {
     return (
@@ -23,11 +22,21 @@ function Header() {
                         </li>
                     </ul>
                     <ul className="ul_main_nav">
-                        <li className="start li_main_nav">Start</li>
-                        <li className="li_main_nav">O co chodzi?</li>
-                        <li className="li_main_nav">O nas</li>
-                        <li className="li_main_nav"> Fundacja i organizacje</li>
-                        <li className="li_main_nav">Kontakt</li>
+                        <li className="start li_main_nav">
+                            <LinkRoll className="roll" to="/" spy={true} smooth={true} offset={50} duration={500} >Start</LinkRoll>
+                        </li>
+                        <li className="li_main_nav">
+                            <LinkRoll className="roll" to="how" spy={true} smooth={true} offset={50} duration={500} >O co chodzi?</LinkRoll>
+                        </li>
+                        <li className="li_main_nav">
+                            <LinkRoll  className="roll" to="us" spy={true} smooth={true} offset={50} duration={500} >O nas</LinkRoll>
+                        </li>
+                        <li className="li_main_nav">
+                            <LinkRoll className="roll" to="/" spy={true} smooth={true} offset={50} duration={500} >Fundacja i organizacje</LinkRoll>
+                        </li>
+                        <li className="li_main_nav">
+                            <LinkRoll className="roll" to="/" spy={true} smooth={true} offset={50} duration={500} >Kontakt</LinkRoll>
+                        </li>
                     </ul>
                     <section className="start_helping">
                         <div className="text_helping">

@@ -4,8 +4,8 @@ import {Link} from "react-router-dom";
 function HowMuch() {
     return (
         <>
-            <section className="how_much">
-                <div className="statistics">
+            <section className="how_much" id="how">
+                <div className="statistics" >
                     <h2>10</h2>
                     <p className="space_stat">oddanych worków</p>
                     <p className="lorem_stat"> Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a
