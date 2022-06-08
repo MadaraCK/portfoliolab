@@ -347,17 +347,98 @@ body {
       display: flex;
       justify-content: right;
       gap: 20px;
+      font-size: 14px;
+      color: $stone;
 
       .link_login {
-
+        color: $stone;
+        border: 1px solid #FAD648;
+        margin-top: -9px;
+        padding: 9px 10px;
       }
     }
 
     .menu_login {
       .ul_login_nav {
         display: flex;
-        gap: 25px;
+        gap: 40px;
+
+        .roll_login {
+          color: $charcoal;
+        }
+
       }
     }
+  }
+
+  .form_login {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    max-width: 520px;
+
+    .text_login {
+      text-align: center;
+      margin-bottom: 120px;
+      font-size: 40px;
+
+      &:after {
+        content: url("../assets/Decoration.svg");
+        width: 130px;
+        height: 30px;
+        position: absolute;
+        top: 80px;
+        right: 170px;
+      }
+    }
+
+    .form {
+      background-color: $silver;
+      border: none;
+      font-weight: bold;
+      color: $charcoal;
+
+      .input_form {
+        padding: 40px 80px;
+
+        .form {
+          border-bottom: 1px solid $stone;
+          margin-top: 20px;
+
+        }
+
+        .password {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .form_reg {
+      .ul_form {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 75px;
+
+
+        .create_acc {
+
+          margin-left: -50px;
+        }
+
+        .login_form {
+          display: flex;
+          box-sizing: border-box;
+          border: 1px solid $olive_green;
+          margin: -16px -50px;
+          padding: 16px 20px;
+
+        }
+      }
+    }
+  }
+
+  .both_link_form {
+    text-decoration: none;
+    color: black;
   }
 }
