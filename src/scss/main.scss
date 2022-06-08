@@ -335,4 +335,29 @@ body {
       height: 935px;
     }
   }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin: 50px 150px;
+    gap: 40px;
+
+    .reg_login {
+      display: flex;
+      justify-content: right;
+      gap: 20px;
+
+      .link_login {
+
+      }
+    }
+
+    .menu_login {
+      .ul_login_nav {
+        display: flex;
+        gap: 25px;
+      }
+    }
+  }
 }
