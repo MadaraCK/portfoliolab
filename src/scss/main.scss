@@ -342,6 +342,8 @@ body {
     float: right;
     margin: 50px 150px;
     gap: 40px;
+    @media screen and (min-width: 2400px) {
+margin: 70px 200px    }
 
     .reg_login {
       display: flex;
@@ -349,6 +351,9 @@ body {
       gap: 20px;
       font-size: 14px;
       color: $stone;
+      @media screen and (min-width: 2400px) {
+        font-size: 20px;
+      }
 
       .link_login {
         color: $stone;
@@ -365,6 +370,10 @@ body {
 
         .roll_login {
           color: $charcoal;
+          font-size: 16px;
+          @media screen and (min-width: 2400px) {
+            font-size: 24px;
+          }
         }
 
       }
@@ -381,6 +390,9 @@ body {
       text-align: center;
       margin-bottom: 120px;
       font-size: 40px;
+      @media screen and (min-width: 2400px) {
+        font-size: 50px;
+      }
 
       &:after {
         content: url("../assets/Decoration.svg");
@@ -389,6 +401,10 @@ body {
         position: absolute;
         top: 80px;
         right: 170px;
+        @media screen and (min-width: 2400px) {
+          right: 210px;
+        }
+
       }
     }
 
@@ -400,11 +416,16 @@ body {
 
       .input_form {
         padding: 40px 80px;
+        @media screen and (min-width: 2400px) {
+          padding: 80px 120px;
+        }
 
         .form {
           border-bottom: 1px solid $stone;
           margin-top: 20px;
-
+          @media screen and (min-width: 2400px) {
+            margin-top: 30px
+          }
         }
 
         .password {
