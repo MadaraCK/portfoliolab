@@ -23,7 +23,15 @@ function Header() {
                     </ul>
                     <ul className="ul_main_nav">
                         <li className="start li_main_nav">
-                            <LinkRoll className="roll" to="/" spy={true} smooth={true} offset={50} duration={500} >Start</LinkRoll>
+                            <LinkRoll
+                                className="roll"
+                                to="/" spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >
+                                Start
+                            </LinkRoll>
                         </li>
                         <li className="li_main_nav">
                             <LinkRoll className="roll" to="how" spy={true} smooth={true} offset={50} duration={500} >O co chodzi?</LinkRoll>

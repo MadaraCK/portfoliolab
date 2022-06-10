@@ -9,10 +9,8 @@ import {
 } from 'react-router-dom';
 import Core from "./components/core";
 
-
-function App(props) {
+function App() {
     return (
-
         <BrowserRouter>
             <Routes>
                 <Route element={<Core/>} path="/"/>
@@ -20,7 +18,6 @@ function App(props) {
                 <Route element={<NewAccount/>} path="/newAccount"/>
             </Routes>
         </BrowserRouter>
-
     );
 }
 

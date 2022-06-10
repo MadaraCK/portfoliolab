@@ -8,7 +8,6 @@ body {
 
   .header_layout {
 
-
     .img_header {
       background-image: url("../assets/Home-Hero-Image.jpg");
       width: 1368px;
@@ -29,7 +28,6 @@ body {
 
         @media screen and (min-width: 2400px) {
           margin: 80px 100px;
-
         }
 
         .link {
@@ -89,7 +87,6 @@ body {
           font-size: 38px;
           color: $charcoal;
           letter-spacing: -0.76px;
-
 
           .decoration {
             background-image: url("../assets/Decoration.svg");
@@ -151,7 +148,6 @@ body {
         text-transform: uppercase;
         font-size: 18px;
         color: $charcoal;
-
       }
 
       .lorem_stat {
@@ -162,7 +158,6 @@ body {
   }
 
   .four_steps {
-
     font-size: 38px;
     color: $charcoal;
     margin: 55px 0 95px 0;
