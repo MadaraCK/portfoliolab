@@ -1,10 +1,10 @@
 import React from 'react';
+import '../scss/main.scss'
 import Header from "./header";
 import HowMuch from "./howMuch";
-import '../scss/main.scss'
 import AboutUs from "./aboutUs";
 
-function Core(props) {
+function Core() {
     return (
         <>
             <Header/>

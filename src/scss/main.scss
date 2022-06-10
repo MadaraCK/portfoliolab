@@ -7,7 +7,6 @@ body {
   overflow-x: hidden;
 
   .header_layout {
-
     .img_header {
       background-image: url("../assets/Home-Hero-Image.jpg");
       width: 1368px;
@@ -36,16 +35,13 @@ body {
           font-size: 14px;
           @media screen and (min-width: 2400px) {
             font-size: 20px;
-
           }
         }
 
         .link_account {
           border: 1px solid $canary_yellow;
           padding: 9px;
-
         }
-
       }
 
       .ul_main_nav {
@@ -120,7 +116,6 @@ body {
           }
         }
       }
-
     }
   }
 
@@ -140,7 +135,6 @@ body {
       h2 {
         font-size: 90px;
         color: $olive_green;
-
       }
 
       .space_stat {
@@ -361,7 +355,6 @@ body {
         .roll_login {
           color: $charcoal;
         }
-
       }
     }
   }
@@ -420,9 +413,7 @@ body {
         justify-content: space-between;
         margin-top: 75px;
 
-
         .create_acc {
-
           margin-left: -50px;
         }
 
@@ -432,7 +423,6 @@ body {
           border: 1px solid $olive_green;
           margin: -16px -50px;
           padding: 16px 20px;
-
         }
       }
     }

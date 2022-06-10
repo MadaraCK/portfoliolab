@@ -1,12 +1,12 @@
 import React from 'react';
-import './scss/main.scss'
-import Login from "./components/login";
-import NewAccount from "./components/newAccount";
 import {
     BrowserRouter,
     Route,
     Routes,
 } from 'react-router-dom';
+import './scss/main.scss'
+import Login from "./components/login";
+import NewAccount from "./components/newAccount";
 import Core from "./components/core";
 
 function App() {
