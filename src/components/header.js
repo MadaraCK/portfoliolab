@@ -15,17 +15,27 @@ function Header() {
 
                     <ul className="ul_main_login clearfix">
                         <li className="li_nav clearfix">
-                            <Link className="link" to="/login">Zaloguj</Link>
+                            <Link
+                                className="link"
+                                to="/login"
+                            >
+                                Zaloguj
+                            </Link>
                         </li>
                         <li>
-                            <Link className="link link_account" to="/newAccount">Załóż konto</Link>
+                            <Link
+                                className="link link_account"
+                                to="/newAccount"
+                            >
+                                Załóż konto
+                            </Link>
                         </li>
                     </ul>
                     <ul className="ul_main_nav">
                         <li className="start li_main_nav">
                             <LinkRoll
                                 className="roll"
-                                to="/" spy={true}
+                                to="/"
                                 smooth={true}
                                 offset={50}
                                 duration={500}
@@ -34,27 +44,68 @@ function Header() {
                             </LinkRoll>
                         </li>
                         <li className="li_main_nav">
-                            <LinkRoll className="roll" to="how" spy={true} smooth={true} offset={50} duration={500} >O co chodzi?</LinkRoll>
+                            <LinkRoll
+                                className="roll"
+                                      to="how"
+                                      smooth={true}
+                                      offset={50}
+                                      duration={500}
+                            >
+                                O co chodzi?
+                            </LinkRoll>
                         </li>
                         <li className="li_main_nav">
-                            <LinkRoll  className="roll" to="us" spy={true} smooth={true} offset={50} duration={500} >O nas</LinkRoll>
+                            <LinkRoll
+                                className="roll"
+                                to="us"
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >
+                                O nas
+                            </LinkRoll>
                         </li>
                         <li className="li_main_nav">
-                            <LinkRoll className="roll" to="/" spy={true} smooth={true} offset={50} duration={500} >Fundacja i organizacje</LinkRoll>
+                            <LinkRoll
+                                className="roll"
+                                to="/"
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >
+                                Fundacja i organizacje
+                            </LinkRoll>
                         </li>
                         <li className="li_main_nav">
-                            <LinkRoll className="roll" to="/" spy={true} smooth={true} offset={50} duration={500} >Kontakt</LinkRoll>
+                            <LinkRoll
+                                className="roll"
+                                to="/"
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >
+                                Kontakt
+                            </LinkRoll>
                         </li>
                     </ul>
                     <section className="start_helping">
                         <div className="text_helping">
-                            <p>Zacznij pomagać!</p>
-                            <p>Oddaj niechciane rzeczy w zaufane ręce</p>
+                            <p>
+                                Zacznij pomagać!
+                            </p>
+                            <p>
+                                Oddaj niechciane rzeczy w zaufane ręce
+                            </p>
                             <div className="decoration"/>
                             <div className="collection">
                                 <ul className="collection_ul">
                                     <li>
-                                        <Link className="link_collection" to="/login">oddaj rzeczy</Link>
+                                        <Link
+                                            className="link_collection"
+                                            to="/login"
+                                        >
+                                            oddaj rzeczy
+                                        </Link>
                                     </li>
                                     <li>
                                         zorganizuj zbiórke
