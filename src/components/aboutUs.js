@@ -1,8 +1,7 @@
 function AboutUs() {
     return (
         <section
-            classNa
-            me="about_us"
+            className="about_us"
             id="us">
             <div className="about_us_text">
                 <div className="text_pe">
