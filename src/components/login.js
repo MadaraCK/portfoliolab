@@ -81,6 +81,7 @@ function Login() {
                                type="email"
                                name="email"
                         />
+
                         <p className="password">
                             Hasło
                         </p>
@@ -88,6 +89,7 @@ function Login() {
                                type="password"
                                name="password"
                         />
+
                     </div>
                 </div>
                 <div className="form_reg">

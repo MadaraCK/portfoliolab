@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import '../scss/main.scss'
 import {Link} from "react-router-dom";
 
-function NewAccount() {
+function NewAccount(props) {
     const initialValues = {
         email: "",
         password: ""
@@ -144,10 +144,8 @@ function NewAccount() {
                                    name="password"
                                    value={formValues.password}
                                    onChange={handleChange}
-
                             />
                         </div>
-
                     </div>
                     <div className="form_reg">
                         <ul className="ul_form">
@@ -166,7 +164,6 @@ function NewAccount() {
                                 </Link>
                             </li>
                         </ul>
-
                     </div>
                 </section>
             </form>

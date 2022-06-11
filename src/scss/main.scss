@@ -398,7 +398,8 @@ body {
         .password {
           margin-top: 30px;
         }
-        .error{
+
+        .error {
           font-size: 14px;
           color: red;
           max-width: 160px;
@@ -431,5 +432,89 @@ body {
   .both_link_form {
     text-decoration: none;
     color: black;
+  }
+
+  .who_we_help {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    color: $charcoal;
+
+    .box_help {
+      .box_header {
+        .main_text {
+          font-size: 38px;
+          text-align: center;
+          position: relative;
+
+          &:after {
+            content: url("../assets/Decoration.svg");
+            position: absolute;
+            top: 70px;
+            left: 525px;
+          }
+        }
+
+        .pagination_help {
+          display: flex;
+          justify-content: center;
+          gap: 150px;
+          font-size: 24px;
+          margin: 100px auto 70px auto;
+          max-width: 170px;
+
+          .pagi_border {
+            border: 1px solid black;
+            text-align: center;
+            padding: 25px;
+          }
+        }
+
+        .text_pagi {
+          display: flex;
+          text-align: center;
+          margin: 80px auto;
+          width: 650px;
+          font-size: 22px;
+        }
+      }
+
+      .box_who_help {
+        display: flex;
+        flex-direction: column;
+        width: 1300px;
+
+        .foundations {
+          margin-bottom: 90px;
+          border-bottom: 1px soid $stone;
+
+          .left {
+            .name_fund {
+              font-size: 26px;
+            }
+
+            .fundation_quest {
+              font-size: 18px;
+              font-family: $font-alt Italic;
+            }
+          }
+
+          .right {
+            float: right;
+
+            p {
+              font-family: $font-alt;
+              font-weight: lighter;
+            }
+          }
+        }
+
+        .foundations1,
+        .foundations2 {
+          padding-bottom: 30px;
+          border-bottom: 1px solid $stone;
+        }
+      }
+    }
   }
 }
