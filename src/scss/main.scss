@@ -467,6 +467,7 @@ body {
             border: 1px solid black;
             text-align: center;
             padding: 25px;
+            margin-top: -12px;
           }
         }
 
@@ -514,6 +515,24 @@ body {
           padding-bottom: 30px;
           border-bottom: 1px solid $stone;
         }
+      }
+    }
+  }
+
+  .contact_section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("../assets/Background-Contact-Form.jpg");
+    height: 100vh;
+
+    .contact {
+        margin: 200px 250px;
+        float: right;
+
+      .contact_main {
+        font-size: 38px;
+      }
+
+      .contact_box {
       }
     }
   }

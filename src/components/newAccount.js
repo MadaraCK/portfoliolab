@@ -5,7 +5,8 @@ import {Link} from "react-router-dom";
 function NewAccount(props) {
     const initialValues = {
         email: "",
-        password: ""
+        password: "",
+
     }
     const [formValues, setFormValues] = useState(initialValues)
     const [formErrors, setFormErrors] = useState({})
@@ -31,14 +32,14 @@ function NewAccount(props) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         if (!values.email) {
             errors.email = 'email jest obowiązkowy'
-        } else if (!regex.test(values.email)){
+        } else if (!regex.test(values.email)) {
             errors.email = 'email jest nie prawidłowy'
         }
         if (!values.password) {
             errors.password = 'hasło jest obowiązkowe'
-        }else if (values.password.length < 4){
+        } else if (values.password.length < 4) {
             errors.password = 'hasło musi byc dłuższe niz 4 znaki'
-        }else if (values.password.length > 10){
+        } else if (values.password.length > 10) {
             errors.password = 'hasło nie może być dłuższe niz 10 znaków'
         }
         return errors;
@@ -126,11 +127,12 @@ function NewAccount(props) {
                             <p className="password">
                                 Hasło
                             </p>
-                            <input className="form form_password"
-                                   type="password"
-                                   name="password"
-                                   value={formValues.password}
-                                   onChange={handleChange}
+                            <input
+                                className="form form_password"
+                                type="password"
+                                name="password"
+                                value={formValues.password}
+                                onChange={handleChange}
                             />
                             <p
                                 className="error">
@@ -139,26 +141,29 @@ function NewAccount(props) {
                             <p className="password">
                                 Powtórz hasło
                             </p>
-                            <input className="form form_password"
-                                   type="password"
-                                   name="password"
-                                   value={formValues.password}
-                                   onChange={handleChange}
+                            <input
+                                className="form form_password"
+                                type="password"
+                                name="password"
+                                value={formValues.password}
+                                onChange={handleChange}
                             />
                         </div>
                     </div>
                     <div className="form_reg">
                         <ul className="ul_form">
                             <li>
-                                <Link className="create_acc both_link_form"
-                                      to="/login">
+                                <Link
+                                    className="create_acc both_link_form"
+                                    to="/login">
                                     Zaloguj się
                                 </Link>
                             </li>
                             <li>
-                                <Link className="login_form both_link_form"
-                                      onClick={handleSubmit}
-                                      to="/login"
+                                <Link
+                                    className="login_form both_link_form"
+                                    onClick={handleSubmit}
+                                    to="/login"
                                 >
                                     Załóż konto
                                 </Link>
