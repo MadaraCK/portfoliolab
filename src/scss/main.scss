@@ -525,14 +525,21 @@ body {
     height: 100vh;
 
     .contact {
-        margin: 200px 250px;
-        float: right;
+      margin: 200px 250px;
+      float: right;
+      display: flex;
+      max-width: 400px;
+      flex-direction: column;
 
       .contact_main {
         font-size: 38px;
-      }
 
-      .contact_box {
+        .contact_box {
+          display: flex;
+          justify-content: center;
+          .contact_input {
+          }
+        }
       }
     }
   }
