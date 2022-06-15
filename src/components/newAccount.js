@@ -108,7 +108,6 @@ function NewAccount(props) {
                     <div className="text_login">
                         Zarejstruj się
                     </div>
-                    <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
                     <div className="form">
                         <div className="input_form">
                             <p className="email">

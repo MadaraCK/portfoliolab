@@ -79,7 +79,7 @@ function Header() {
                         <li className="li_main_nav">
                             <LinkRoll
                                 className="roll"
-                                to="/"
+                                to="contact"
                                 smooth={true}
                                 offset={50}
                                 duration={500}

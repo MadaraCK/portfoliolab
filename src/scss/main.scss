@@ -6,6 +6,11 @@ body {
   font-family: $font-base;
   overflow-x: hidden;
 
+  input,
+  textarea:focus {
+    outline: none;
+  }
+
   .header_layout {
     .img_header {
       background-image: url("../assets/Home-Hero-Image.jpg");
@@ -524,12 +529,12 @@ body {
     url("../assets/Background-Contact-Form.jpg");
     width: 1900px;
     height: 1112px;
+    position: relative;
 
     .contact {
       margin: 200px 250px;
       float: right;
       display: flex;
-      max-width: 700px;
       flex-direction: column;
 
       .contact_main {
@@ -537,12 +542,12 @@ body {
         text-align: center;
         margin-bottom: 130px;
         position: relative;
-        &:after{
+
+        &:after {
           content: url("../assets/Decoration.svg");
           position: absolute;
           top: 80px;
           right: 140px;
-
         }
       }
 
@@ -551,35 +556,80 @@ body {
         .contact_input {
           display: flex;
           gap: 30px;
+
           input {
             border: none;
           }
 
           .name_input,
-          .email_input{
+          .email_input {
             float: right;
             border-bottom: 1px solid $stone;
             width: 250px;
+
             .text_input,
-            .input_text{
+            .input_text {
               color: $charcoal;
               font-weight: bold;
               padding-top: 20px;
-
             }
           }
         }
       }
-      .textarea_box{
+
+      .textarea_box {
         margin-top: 40px;
-        p{
+
+        p {
           color: $charcoal;
           font-weight: bold;
         }
-        textarea{
-          margin-top: 12px;
+
+        textarea {
           border: none;
+          margin-top: 12px;
           resize: none;
+          text-align: justify-all;
+        }
+
+        .button_box {
+          .send_message {
+            float: right;
+            margin-top: 60px;
+            padding: 13px 52px;
+            background: white;
+            outline: none;
+            font-size: 18px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      position: absolute;
+      bottom: 25px;
+
+      .copyright {
+        text-align: center;
+        font-size: 18px;
+        position: absolute;
+        left: -200px;
+      }
+
+      .box_social {
+        display: flex;
+        gap: 20px;
+        justify-content: right;
+        float: right;
+        margin-left: 450px;
+        .facebook {
+          content: url("../assets/Facebook.svg");
+        }
+
+        .instagram {
+          content: url("../assets/Instagram.svg");
         }
       }
     }
