@@ -522,23 +522,64 @@ body {
   .contact_section {
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
     url("../assets/Background-Contact-Form.jpg");
-    height: 100vh;
+    width: 1900px;
+    height: 1112px;
 
     .contact {
       margin: 200px 250px;
       float: right;
       display: flex;
-      max-width: 400px;
+      max-width: 700px;
       flex-direction: column;
 
       .contact_main {
         font-size: 38px;
+        text-align: center;
+        margin-bottom: 130px;
+        position: relative;
+        &:after{
+          content: url("../assets/Decoration.svg");
+          position: absolute;
+          top: 80px;
+          right: 140px;
 
-        .contact_box {
+        }
+      }
+
+      .contact_box {
+
+        .contact_input {
           display: flex;
-          justify-content: center;
-          .contact_input {
+          gap: 30px;
+          input {
+            border: none;
           }
+
+          .name_input,
+          .email_input{
+            float: right;
+            border-bottom: 1px solid $stone;
+            width: 250px;
+            .text_input,
+            .input_text{
+              color: $charcoal;
+              font-weight: bold;
+              padding-top: 20px;
+
+            }
+          }
+        }
+      }
+      .textarea_box{
+        margin-top: 40px;
+        p{
+          color: $charcoal;
+          font-weight: bold;
+        }
+        textarea{
+          margin-top: 12px;
+          border: none;
+          resize: none;
         }
       }
     }
