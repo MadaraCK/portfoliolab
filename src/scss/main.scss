@@ -89,6 +89,10 @@ body {
           color: $charcoal;
           letter-spacing: -0.76px;
 
+          .text_start_helping {
+            line-height: 55px;
+          }
+
           .decoration {
             background-image: url("../assets/Decoration.svg");
             width: 250px;
@@ -111,6 +115,7 @@ body {
                 max-width: 200px;
                 padding: 13px 60px;
                 color: $charcoal;
+                line-height: 45px;
               }
 
               .link_collection {
@@ -152,6 +157,11 @@ body {
       .lorem_stat {
         color: $charcoal;
         max-width: 320px;
+        font-family: $font-alt;
+        letter-spacing: -0.32px;
+        line-height: 25px;
+        font-weight: 300;
+
       }
     }
   }
@@ -180,7 +190,7 @@ body {
     height: 40vh;
     display: flex;
     justify-content: center;
-    gap: 150px;
+    gap: 200px;
 
     .instruction {
       align-self: center;
@@ -252,6 +262,7 @@ body {
           background: black;
         }
       }
+
     }
   }
 
@@ -261,7 +272,7 @@ body {
     justify-content: center;
 
     .link_give {
-
+      line-height: 45px;
       text-decoration: none;
       text-align: center;
       max-width: 200px;
@@ -316,6 +327,7 @@ body {
             content: url("../assets/Signature.svg");
             width: 100px;
             height: 50px;
+            right: 1220px;
             position: absolute;
             margin-top: 100px;
           }
@@ -325,7 +337,7 @@ body {
 
     .about_img {
       background-image: url("../assets/People.jpg");
-      width: 1308px;
+      width: 1008px;
       height: 935px;
     }
   }
@@ -482,6 +494,7 @@ body {
           margin: 80px auto;
           width: 650px;
           font-size: 22px;
+          line-height: 30px;
         }
       }
 
@@ -495,6 +508,7 @@ body {
           border-bottom: 1px soid $stone;
 
           .left {
+
             .name_fund {
               font-size: 26px;
             }
@@ -561,14 +575,12 @@ body {
             border: none;
           }
 
-          .name_input,
-          .email_input {
+          .name_input, .email_input {
             float: right;
             border-bottom: 1px solid $stone;
             width: 250px;
 
-            .text_input,
-            .input_text {
+            .text_input, .input_text {
               color: $charcoal;
               font-weight: bold;
               padding-top: 20px;
@@ -593,6 +605,7 @@ body {
         }
 
         .button_box {
+
           .send_message {
             float: right;
             margin-top: 60px;
@@ -624,6 +637,7 @@ body {
         justify-content: right;
         float: right;
         margin-left: 450px;
+
         .facebook {
           content: url("../assets/Facebook.svg");
         }

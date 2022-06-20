@@ -1,10 +1,9 @@
 import React from 'react';
-import '../scss/main.scss'
-
 import {
     Link,
 } from 'react-router-dom'
 import { Link as LinkRoll, } from 'react-scroll'
+import '../scss/main.scss'
 
 function Header() {
     return (
@@ -93,7 +92,7 @@ function Header() {
                             <p>
                                 Zacznij pomagać!
                             </p>
-                            <p>
+                            <p className="text_start_helping">
                                 Oddaj niechciane rzeczy w zaufane ręce
                             </p>
                             <div className="decoration"/>
