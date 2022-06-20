@@ -12,7 +12,7 @@ function WhoWeHelp() {
                     </div>
                     <div className="pagination_help">
                         <p className="pagi_border">
-                            fundacjom
+                            Fundacjom
                         </p>
                         <p>
                             Organizacjom pozarządoym

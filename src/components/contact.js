@@ -43,11 +43,10 @@ function Contact() {
                             id=""
                             cols="70"
                             rows="7"
-                            placeholder="
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            ">
+                            placeholder=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.">
                         </textarea>
                         <div className="button_box">
                             <button className="send_message">Wyślij</button>
