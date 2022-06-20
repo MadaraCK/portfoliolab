@@ -30,6 +30,9 @@ body {
         gap: 30px;
         margin: 68px 34px;
 
+        .logout{
+          cursor: pointer;
+        }
         @media screen and (min-width: 2400px) {
           margin: 80px 100px;
         }

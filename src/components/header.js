@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Link,
 } from 'react-router-dom'
-import { Link as LinkRoll, } from 'react-scroll'
+import {Link as LinkRoll,} from 'react-scroll'
+import {auth} from '../firebase-config'
 import '../scss/main.scss'
+import {onAuthStateChanged, signOut} from "firebase/auth";
 
 function Header() {
+    const [user, setUser] = useState({})
+
+    onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser)
+    })
+
+    const logout = async () => {
+        await signOut(auth);
+    }
+
     return (
         <>
             <header className="header_layout clearfix">
@@ -13,6 +25,7 @@ function Header() {
                 <section className="main_section clearfix">
 
                     <ul className="ul_main_login clearfix">
+                            {user?.email}
                         <li className="li_nav clearfix">
                             <Link
                                 className="link"
@@ -28,6 +41,12 @@ function Header() {
                             >
                                 Załóż konto
                             </Link>
+                        </li>
+                        <li
+                            className="logout"
+                            onClick={logout}
+                        >
+                            wyloguj
                         </li>
                     </ul>
                     <ul className="ul_main_nav">
@@ -45,10 +64,10 @@ function Header() {
                         <li className="li_main_nav">
                             <LinkRoll
                                 className="roll"
-                                      to="how"
-                                      smooth={true}
-                                      offset={50}
-                                      duration={500}
+                                to="how"
+                                smooth={true}
+                                offset={50}
+                                duration={500}
                             >
                                 O co chodzi?
                             </LinkRoll>

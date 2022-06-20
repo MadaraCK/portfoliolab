@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../scss/main.scss'
 import {Link} from "react-router-dom";
+import {signInWithEmailAndPassword} from "firebase/auth";
+import {auth} from "../firebase-config";
 
 function Login() {
+    const [loginEmail, setLoginEmail] = useState("")
+    const [loginPassword, setLoginPassword] = useState("")
+
+    const login = async () => {
+        try {
+            const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
     return (
         <div className="Login">
             <section className="menu clearfix">
@@ -80,6 +92,9 @@ function Login() {
                         <input className="form form_email"
                                type="email"
                                name="email"
+                               onChange={(event => {
+                                   setLoginEmail(event.target.value)
+                               })}
                         />
 
                         <p className="password">
@@ -88,6 +103,9 @@ function Login() {
                         <input className="form form_password"
                                type="password"
                                name="password"
+                               onChange={(event => {
+                                   setLoginPassword(event.target.value)
+                               })}
                         />
 
                     </div>
@@ -102,7 +120,9 @@ function Login() {
                         </li>
                         <li>
                             <Link className="login_form both_link_form"
-                                  to="/login">
+                                  to="/"
+                                  onClick={login}
+                            >
                                 Zaloguj się
                             </Link>
                         </li>

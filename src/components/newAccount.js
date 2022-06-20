@@ -1,48 +1,21 @@
-import React, {useState, useEffect} from 'react';
-import '../scss/main.scss'
+import React, {useState, } from 'react';
+import {createUserWithEmailAndPassword, } from 'firebase/auth'
+import {auth} from '../firebase-config'
 import {Link} from "react-router-dom";
+import '../scss/main.scss'
 
-function NewAccount(props) {
-    const initialValues = {
-        email: "",
-        password: "",
+function NewAccount() {
 
-    }
-    const [formValues, setFormValues] = useState(initialValues)
-    const [formErrors, setFormErrors] = useState({})
-    const [isSubmit, setIsSubmit] = useState(false)
 
-    const handleChange = (e) => {
-        const {name, value} = e.target
-        setFormValues({...formValues, [name]: value})
-    }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setFormErrors(validete(formValues))
-        setIsSubmit(true)
-    }
-    useEffect(() => {
-        console.log(formErrors)
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
-            console.log(formValues)
+    const [registerEmail, setRegisterEmail] = useState("")
+    const [registerPassword, setRegisterPassword] = useState("")
+
+    const register = async () => {
+        try {
+            const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+        } catch (error) {
+            console.log(error.message)
         }
-    }, [formErrors])
-    const validete = (values) => {
-        const errors = {}
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        if (!values.email) {
-            errors.email = 'email jest obowiązkowy'
-        } else if (!regex.test(values.email)) {
-            errors.email = 'email jest nie prawidłowy'
-        }
-        if (!values.password) {
-            errors.password = 'hasło jest obowiązkowe'
-        } else if (values.password.length < 4) {
-            errors.password = 'hasło musi byc dłuższe niz 4 znaki'
-        } else if (values.password.length > 10) {
-            errors.password = 'hasło nie może być dłuższe niz 10 znaków'
-        }
-        return errors;
     }
     return (
         <div className="Login">
@@ -103,7 +76,7 @@ function NewAccount(props) {
                     </ul>
                 </div>
             </section>
-            <form onSubmit={handleSubmit}>
+            <form>
                 <section className="form_login">
                     <div className="text_login">
                         Zarejstruj się
@@ -116,13 +89,10 @@ function NewAccount(props) {
                             <input
                                 className="form form_email"
                                 type="email" name="email"
-                                value={formValues.email}
-                                onChange={handleChange}
+                                onChange={(event => {
+                                    setRegisterEmail(event.target.value)
+                                })}
                             />
-                            <p
-                                className="error">
-                                {formErrors.email}
-                            </p>
                             <p className="password">
                                 Hasło
                             </p>
@@ -130,13 +100,10 @@ function NewAccount(props) {
                                 className="form form_password"
                                 type="password"
                                 name="password"
-                                value={formValues.password}
-                                onChange={handleChange}
+                                onChange={(event => {
+                                    setRegisterPassword(event.target.value)
+                                })}
                             />
-                            <p
-                                className="error">
-                                {formErrors.password}
-                            </p>
                             <p className="password">
                                 Powtórz hasło
                             </p>
@@ -144,8 +111,6 @@ function NewAccount(props) {
                                 className="form form_password"
                                 type="password"
                                 name="password"
-                                value={formValues.password}
-                                onChange={handleChange}
                             />
                         </div>
                     </div>
@@ -161,8 +126,8 @@ function NewAccount(props) {
                             <li>
                                 <Link
                                     className="login_form both_link_form"
-                                    onClick={handleSubmit}
-                                    to="/login"
+                                    onClick={register}
+                                    to="/"
                                 >
                                     Załóż konto
                                 </Link>
