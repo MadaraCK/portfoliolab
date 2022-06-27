@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Link,
 } from 'react-router-dom'
@@ -9,14 +9,18 @@ import {onAuthStateChanged, signOut} from "firebase/auth";
 
 function Header() {
     const [user, setUser] = useState({})
+    const [login, setLogin] = useState('')
+
 
     onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser)
     })
 
+
     const logout = async () => {
         await signOut(auth);
     }
+
 
     return (
         <>
@@ -25,7 +29,7 @@ function Header() {
                 <section className="main_section clearfix">
 
                     <ul className="ul_main_login clearfix">
-                            {user?.email}
+                        {user?.email}
                         <li className="li_nav clearfix">
                             <Link
                                 className="link"
