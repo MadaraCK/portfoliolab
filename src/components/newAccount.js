@@ -1,7 +1,7 @@
-import React, {useState, } from 'react';
-import {createUserWithEmailAndPassword, } from 'firebase/auth'
+import React, {useState,} from 'react';
+import {createUserWithEmailAndPassword,} from 'firebase/auth'
 import {auth} from '../firebase-config'
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import '../scss/main.scss'
 
 function NewAccount() {
@@ -9,16 +9,40 @@ function NewAccount() {
 
     const [registerEmail, setRegisterEmail] = useState("")
     const [registerPassword, setRegisterPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [errorPassword, setErrorPassword] = useState("")
+    const [errorEmail, setErrorEmail] = useState("")
+    const [correct, setCorrect] = useState("")
 
-    const register = async () => {
+    const register = async (e) => {
+        e.preventDefault()
+
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
+        if (registerPassword !== confirmPassword) {
+            return setErrorPassword('Hasło musi być takie same')
+        } else if (registerPassword < 6) {
+            return setErrorPassword('Hasło musi mieć conajmniej 6 znaków')
+        }else {
+            setErrorPassword('')
+        }
+
+        if (registerEmail === ""){
+            return setErrorEmail("email jest wymagany")
+        }else if (!regex.test(registerEmail)){
+            return setErrorEmail("nie prawidłowy email")
+        }else {
+            setErrorEmail('')
+        }
+
         try {
             const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
-        } catch (error) {
-            console.log(error.message)
+            setCorrect('Pomyślnie zarejstrowano')
+        } catch {
+            console.log('cos poszło nie tak')
         }
     }
     return (
-        <div className="Login">
+        <div className="Login" onSubmit={register}>
             <section className="menu clearfix">
                 <div className="reg_login">
                     <p>Zaloguj</p>
@@ -82,6 +106,9 @@ function NewAccount() {
                         Zarejstruj się
                     </div>
                     <div className="form">
+                        <p className="failed">{errorEmail}</p>
+                        <p className="failed">{errorPassword}</p>
+                        <p className="correct">{correct}</p>
                         <div className="input_form">
                             <p className="email">
                                 Email
@@ -111,6 +138,9 @@ function NewAccount() {
                                 className="form form_password"
                                 type="password"
                                 name="password"
+                                onChange={(event => {
+                                    setConfirmPassword(event.target.value)
+                                })}
                             />
                         </div>
                     </div>

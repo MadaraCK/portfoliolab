@@ -30,9 +30,10 @@ body {
         gap: 30px;
         margin: 68px 34px;
 
-        .logout{
+        .logout {
           cursor: pointer;
         }
+
         @media screen and (min-width: 2400px) {
           margin: 80px 100px;
         }
@@ -408,24 +409,33 @@ body {
       font-weight: bold;
       color: $charcoal;
 
+      .failed {
+        color: red;
+        background-color: lightcoral;
+        max-width: 60%;
+        margin: 0 auto;
+        line-height: 20px;
+        text-align: center;
+      }
+      .correct{
+        color: green;
+        background-color: lightgreen;
+        max-width: 60%;
+        margin: 0 auto;
+        line-height: 20px;
+        text-align: center;
+      }
+
       .input_form {
         padding: 40px 80px;
 
         .form {
           border-bottom: 1px solid $stone;
           margin-top: 20px;
-
         }
 
         .password {
           margin-top: 30px;
-        }
-
-        .error {
-          font-size: 14px;
-          color: red;
-          max-width: 160px;
-          opacity: .7;
         }
       }
     }
@@ -578,7 +588,8 @@ body {
 
           input {
             border: none;
-            &::placeholder{
+
+            &::placeholder {
               color: $contact;
             }
           }
@@ -610,7 +621,8 @@ body {
           margin-top: 12px;
           resize: none;
           text-align: justify-all;
-          &::placeholder{
+
+          &::placeholder {
             color: $contact;
             line-height: 18px;
           }

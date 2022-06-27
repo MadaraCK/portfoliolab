@@ -1,18 +1,21 @@
 import React, {useState} from 'react';
 import '../scss/main.scss'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../firebase-config";
 
 function Login() {
     const [loginEmail, setLoginEmail] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
+    const [error, setError] = useState("")
+    const history = useNavigate()
 
     const login = async () => {
         try {
-            const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
-        } catch (error) {
-            console.log(error.message)
+            let user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+            history('/')
+        } catch {
+            setError("email lub hasło jest nie prawidłowy")
         }
     }
     return (
@@ -85,6 +88,7 @@ function Login() {
                     Zaloguj się
                 </div>
                 <div className="form">
+                    <p className="failed">{error}</p>
                     <div className="input_form">
                         <p className="email">
                             Email
@@ -120,8 +124,9 @@ function Login() {
                         </li>
                         <li>
                             <Link className="login_form both_link_form"
-                                  to="/"
+                                  to="/login"
                                   onClick={login}
+
                             >
                                 Zaloguj się
                             </Link>
