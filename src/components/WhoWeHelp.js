@@ -1,4 +1,3 @@
-
 function WhoWeHelp() {
     return (
         <section className="who_we_help" id="help">

@@ -13,7 +13,7 @@ function Login() {
     const login = async () => {
         try {
             let user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
-            history('/')
+            history('/IfLogged')
         } catch {
             setError("email lub hasło jest nie prawidłowy")
         }
@@ -90,28 +90,24 @@ function Login() {
                 <div className="form">
                     <p className="failed">{error}</p>
                     <div className="input_form">
-                        <p className="email">
-                            Email
-                        </p>
-                        <input className="form form_email"
-                               type="email"
-                               name="email"
-                               onChange={(event => {
-                                   setLoginEmail(event.target.value)
-                               })}
+                        <p className="email">Email</p>
+                        <input
+                            className="form form_email"
+                            type="email"
+                            name="email"
+                            onChange={(event => {
+                               setLoginEmail(event.target.value)
+                            })}
                         />
-
-                        <p className="password">
-                            Hasło
-                        </p>
-                        <input className="form form_password"
-                               type="password"
-                               name="password"
-                               onChange={(event => {
-                                   setLoginPassword(event.target.value)
-                               })}
+                        <p className="password">Hasło</p>
+                        <input
+                            className="form form_password"
+                            type="password"
+                            name="password"
+                            onChange={(event => {
+                               setLoginPassword(event.target.value)
+                            })}
                         />
-
                     </div>
                 </div>
                 <div className="form_reg">
@@ -124,9 +120,8 @@ function Login() {
                         </li>
                         <li>
                             <Link className="login_form both_link_form"
-                                  to="/login"
+                                  to="/IfLogged"
                                   onClick={login}
-
                             >
                                 Zaloguj się
                             </Link>

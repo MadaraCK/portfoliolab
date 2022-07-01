@@ -4,10 +4,12 @@ import {
     Route,
     Routes,
 } from 'react-router-dom';
-import './scss/main.scss'
 import Login from "./components/login";
 import NewAccount from "./components/newAccount";
 import Core from "./components/core";
+import PrivateRoutes from "./components/PrivateRoutes";
+import IfLogged from "./components/IfLogged";
+import './scss/main.scss'
 
 function App() {
     return (
@@ -16,6 +18,9 @@ function App() {
                 <Route element={<Core/>} path="/"/>
                 <Route element={<Login/>} path="/login"/>
                 <Route element={<NewAccount/>} path="/newAccount"/>
+                <Route element={<PrivateRoutes/>}>
+                    <Route element={<IfLogged/>} path="/IfLogged"/>
+                </Route>
             </Routes>
         </BrowserRouter>
     );

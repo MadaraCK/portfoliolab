@@ -1,12 +1,10 @@
 import React, {useState,} from 'react';
 import {createUserWithEmailAndPassword,} from 'firebase/auth'
 import {auth} from '../firebase-config'
-import {Link, useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 import '../scss/main.scss'
 
 function NewAccount() {
-
-
     const [registerEmail, setRegisterEmail] = useState("")
     const [registerPassword, setRegisterPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
@@ -19,26 +17,26 @@ function NewAccount() {
 
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
         if (registerPassword !== confirmPassword) {
-            return setErrorPassword('Hasło musi być takie same')
+            return setErrorPassword('Hasło musi być takie same');
         } else if (registerPassword < 6) {
-            return setErrorPassword('Hasło musi mieć conajmniej 6 znaków')
+            return setErrorPassword('Hasło musi mieć conajmniej 6 znaków');
         }else {
-            setErrorPassword('')
+            setErrorPassword('');
         }
 
         if (registerEmail === ""){
-            return setErrorEmail("email jest wymagany")
+            return setErrorEmail("email jest wymagany");
         }else if (!regex.test(registerEmail)){
-            return setErrorEmail("nie prawidłowy email")
+            return setErrorEmail("nie prawidłowy email");
         }else {
-            setErrorEmail('')
+            setErrorEmail('');
         }
 
         try {
-            const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
-            setCorrect('Pomyślnie zarejstrowano')
+            const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
+            setCorrect('Pomyślnie zarejstrowano');
         } catch {
-            console.log('cos poszło nie tak')
+            console.log('cos poszło nie tak');
         }
     }
     return (
